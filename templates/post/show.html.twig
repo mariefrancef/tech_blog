@@ -18,4 +18,15 @@
 </div>
 </br>
 
+<div>
+  <h2>Commentaires</h2>
+  {% for comment in post.comments %}
+    <strong>Username : {{ comment.username }}</strong>
+    <p>Comment : {{ comment.content }}</p>
+    <small>Published : {{ comment.createdAt ? comment.createdAt|date('d/m/Y H:i') : '' }}</small>
+  {% else %}
+    <p>No comments yet.</p>
+  {% endfor %}
+</div>
+
 {% endblock %}
