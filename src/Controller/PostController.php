@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class PostController extends AbstractController
 {
-    #[Route('/{id}', name: 'app_post_show', methods: ['GET', 'POST'])]
+    #[Route('/post/{id}', name: 'app_post_show', methods: ['GET', 'POST'])]
     public function show(Post $post, EntityManagerInterface $entityManager, Request $request): Response
     {
 
