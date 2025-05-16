@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article{% endblock %}
+
+{% block body %}
+
+<div>
+
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.description }}</p>
+
+</br>
+  <h2>Send comment</h2>
+  {{ form_start(commentForm) }}
+  {{ form_widget(commentForm) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+  {{ form_end(commentForm) }}
+</div>
+</br>
+
+{% endblock %}
