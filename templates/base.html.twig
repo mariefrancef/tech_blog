@@ -12,9 +12,14 @@
         {% endblock %}
     </head>
     <body>
-        <header>
-            <img src="{{ asset('images/logo-tech-trendz.png') }}" alt="Logo blog" width="200">
-        </header>
+
+    <header class="header">
+        <img src="{{ asset('images/logo-tech-trendz.png') }}" alt="Logo blog" width="200">
+        <nav>
+            <a href="{{ path('app_home') }}">Home</a>
+            <a href="{{ path('app_about') }}">About</a>
+        </nav>
+    </header>
         {% block body %}{% endblock %}
         <footer>&copy; 2025 TechBlog</footer>
     </body>
