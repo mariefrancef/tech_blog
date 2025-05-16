@@ -15,6 +15,11 @@ class Category
     #[ORM\Column]
     private ?int $id = null;
 
+    public function __toString()
+    {
+        return $this->title;
+    }
+
     /**
      * @var Collection<int, Post>
      */
